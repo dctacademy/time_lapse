@@ -1,0 +1,26 @@
+	body{
+		
+	}
+	h1{
+		font-size: 100px;
+		text-shadow: 2px 3px 6px #ccc;
+	}
+
+	h2{
+		font-size: 40px;
+	}
+	ol{
+
+	}
+	li{
+		font-size: 25px;
+		list-style-type: none;
+	}
+	#end {
+		margin-top: 20px;
+	}
+
+	.timerDisplay{
+		color: #b92c28;
+		text-shadow: 2px 3px 6px #ccc;
+	}

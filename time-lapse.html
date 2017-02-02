@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Lapse</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="time-lapse.css" />
+
+</head>
+<body>
+	<div class="container">
+	<div id="displayTimeLapse" align="center">
+		<h1><span  id="timer">00:00</span>
+		<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" id="modalButton">
+		  <i class="glyphicon glyphicon-time"></i>
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h3 class="modal-title" id="myModalLabel">Set Time</h3>
+		      </div>
+		      <div class="modal-body" style="min-height: 150px;">
+		    		
+ 					<form id="setTimeForm">
+								<input type="text" id="setTime" class="form-control" placeholder="hrs : mins : secs" value="00:00:00"><br/>
+							<input type="submit" value="Set Time" class="btn btn-primary" />
+
+		     	</form>
+		     	</div>
+		    </div>
+		  </div>
+		</div>
+</h1>
+
+		<!-- Button trigger modal -->
+		
+		<button id="start" class="btn btn-success btn-lg ">
+		<i class="glyphicon glyphicon-play"> </i>
+			Start
+		</button>
+
+
+
+		<button id="stop" class="btn btn-info btn-lg">
+		<i class="glyphicon glyphicon-pause"> </i>
+			Pause
+		</button>
+
+
+		<h2>Time Lapse</h3>
+			<span id="timeLapse">
+
+			</span>
+
+		<button id="end" class="btn btn-danger btn-lg">
+		<i class="glyphicon glyphicon-stop"> </i>
+			End Session
+		</button>
+	
+	</div>
+</div>
+<script src="time-lapse.js"> </script>
+</body>
+</html>
